@@ -1,0 +1,201 @@
+.features__wrapper {
+  min-width: 290px;
+  padding: 37px 15px;
+  margin: 0 auto;
+}
+
+.features__item {
+  position: relative;
+
+  display: block;
+  padding-top: 75px;
+  padding-left: 26px;
+  padding-right: 13px;
+  padding-bottom: 23px;
+  margin-bottom: 20px;
+
+  text-decoration: none;
+
+  border: 1px $color-gray solid;
+  border-left: 2px $color-blue solid;
+  background-color: $color-white;
+
+  svg {
+    fill: $color-blue;
+  }
+
+  &--stopwatch {
+    svg {
+      position: absolute;
+      top: 24px;
+      left: 21px;
+
+      width: 37px;
+      height: 35px;
+    }
+  }
+
+  &--hired {
+    padding-right: 10px;
+
+    svg {
+      position: absolute;
+      top: 22px;
+      left: 23px;
+
+      width: 37px;
+      height: 35px;
+    }
+  }
+
+  &--detective {
+    svg {
+      position: absolute;
+      top: 24px;
+      left: 22px;
+
+      width: 37px;
+      height: 35px;
+    }
+  }
+
+  &--tag {
+    padding-bottom: 33px;
+
+    svg {
+      position: absolute;
+      top: 32px;
+      left: 24px;
+
+
+      width: 37px;
+      height: 35px;
+    }
+  }
+}
+
+.features__title {
+  width: 240px;
+  margin: 0;
+  margin-bottom: 6px;
+
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 27px;
+
+  color: $color-blue;
+  letter-spacing: 0.5px;
+}
+
+.features__description {
+  margin: 0;
+
+  color: $color-dark-gray;
+  line-height: 22px;
+}
+
+@media (min-width: $tablet-width) {
+  .features {
+    margin-bottom: 40px;
+  }
+
+  .features__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    padding: 54px 25px 0;
+  }
+
+  .features__item {
+    width: 48%;
+    padding: 66px 22px 22px 25px;
+    margin-bottom: 30px;
+
+    &--tag {
+      padding-bottom: 33px;
+
+      svg {
+        top: 22px;
+        left: 24px;
+      }
+    }
+  }
+
+  .features__title {
+    width: 300px;
+    font-size: 24px;
+    line-height: 34px;
+    letter-spacing: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .features {
+    margin-bottom: 90px;
+  }
+
+  .features__wrapper {
+    width: 1220px;
+    padding-top: 109px;
+  }
+
+  .features__item {
+    width: 48.7%;
+    padding: 94px 40px 64px 43px;
+
+    &--stopwatch {
+      svg {
+        top: 38px;
+        left: 38px;
+      }
+    }
+
+    &--hired {
+      svg {
+        top: 38px;
+        left: 42px;
+      }
+    }
+
+    &--detective {
+      svg {
+        top: 42px;
+        left: 42px;
+      }
+    }
+
+    &--tag {
+      padding-bottom: 88px;
+
+      svg {
+        top: 42px;
+        left: 42px;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $color-blue;
+      color: $color-white;
+      cursor: pointer;
+
+      .features__title {
+        color: $color-white;
+      }
+
+      .features__description {
+        color: $color-white;
+      }
+
+      svg {
+        fill: $color-white;
+      }
+    }
+  }
+
+  .features__title {
+    margin-bottom: 15px;
+  }
+}

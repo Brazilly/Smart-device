@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <link href="css/style.min.css" rel="stylesheet">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <title>Smart device</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<body>
+<div class="sprite" style="display: none">
+  <include src="build/img/sprite.svg"></include>
+</div>
+
+<header class="page-header">
+  <div class="page-header__wrapper">
+    <a class="page-header__logo-link" href="#">
+      <p class="page-header__logo-text">Smart Device</p>
+      <p class="page-header__logo-text-add">умные технологии</p>
+      <svg class="page-header__logo">
+        <use xlink:href="#icon-logo"></use>
+      </svg>
+    </a>
+    <div class="page-header__right-side">
+      <button class="page-header__button" type="button"><span class="visually-hidden">Меню</span></button>
+      <a class="page-header__link page-header__link--mail" href="mailto:info@sd.ru">
+        <span class="page-header__link-text">info@sd.ru</span>
+      </a>
+      <a class="page-header__link page-header__link--phone" href="tel:+74950005252">
+        <span class="page-header__link-text">+7 (495) 000 52 52</span>
+      </a>
+      <a class="page-header__link page-header__link--call" href="#">Заказать звонок</a>
+    </div>
+  </div>
+</header>
+
+<main class="page-main">
+  <h1 class="visually-hidden">Smart-device - умные технологии</h1>
+
+  <section class="main-intro">
+    <div class="main-intro__wrapper">
+      <article class="main-intro__item">
+        <h2 class="main-intro__title">Печатные платы</h2>
+        <p class="main-intro__description">производство и монтаж, поставка комплектующих, блоков и модулей</p>
+        <a class="main-intro__link main-intro__link--mobile" href="#">Бесплатная консультация</a>
+        <a class="main-intro__link main-intro__link--tablet" href="#">Получить бесплатную консультацию</a>
+      </article>
+      <a class="main-intro__scroll" href="#">Скролл вниз</a>
+    </div>
+  </section>
+
+  <div class="features-about-wrapper">
+    <section class="features">
+      <h2 class="visually-hidden">Особенности</h2>
+
+      <div class="features__wrapper">
+        <a class="features__item features__item--stopwatch" href="#">
+          <svg>
+            <use xlink:href="#icon-stopwatch"></use>
+          </svg>
+          <h3 class="features__title">Оперативные сроки</h3>
+          <p class="features__description">Усовершенствованная логистическая система позволяет нам просчитывать
+            стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
+        </a>
+        <a class="features__item features__item--hired" href="#">
+          <svg>
+            <use xlink:href="#icon-hired"></use>
+          </svg>
+          <h3 class="features__title">Крупные поставщики</h3>
+          <p class="features__description">Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE,
+            HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.</p>
+        </a>
+        <a class="features__item features__item--detective" href="#">
+          <svg>
+            <use xlink:href="#icon-detective"></use>
+          </svg>
+          <h3 class="features__title">Полная конфиденциальность</h3>
+          <p class="features__description">По желанию клиента мы обеспечиваем полную конфеденциальность.</p>
+        </a>
+        <a class="features__item features__item--tag" href="#">
+          <svg>
+            <use xlink:href="#icon-tag"></use>
+          </svg>
+          <h3 class="features__title">Персонализация стоимости</h3>
+          <p class="features__description">Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы
+            установить
+            ту цену, которая Вас устраивает.</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="about__wrapper">
+        <h2 class="about__title">О компании</h2>
+
+        <p class="about__description about__description--first"> Мы поставляем электронные комплектующие, производим
+          печатные платы и предоставляем
+          мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.
+
+        <p class="about__description about__description--second">Наши поставщики - мировые производители электронных
+          компонентов: OSRAM, CREE,
+          HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских
+          Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие
+          Производители светотехники России.
+        </p>
+
+        <a class="about__button" href="#">Подробнее</a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<template id="modal-call">
+  <div class="modal-call">
+    <div class="modal-call__wrapper"></div>
+    <div class="modal-call__block">
+      <p class="modal-call__title">Закажите звонок</p>
+      <p class="modal-call__text">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+
+      <form class="modal-call__form" action="#">
+        <input class="modal-call__input modal-call__input--first" type="text" id="name" placeholder="Имя">
+        <label for="name"></label>
+        <input class="modal-call__input" type="text" id="tel" placeholder="Телефон">
+        <label for="tel"></label>
+        <textarea class="modal-call__input modal-call__input--textarea" id="textarea"
+                  placeholder="Ваш вопрос"></textarea>
+        <button class="modal-call__button" type="submit">Отправить</button>
+      </form>
+
+      <input class="modal-call__checkbox" type="checkbox" id="checkbox" name="checkbox">
+      <label class="modal-call__checkbox-label" for="checkbox">Я согласен на обработку персональных данных</label>
+      <button class="modal-call__button-close"><span class="visually-hidden">Закрыть</span></button>
+    </div>
+  </div>
+</template>
+
+<script src="js/script.min.js"></script>
+</body>
+</html>

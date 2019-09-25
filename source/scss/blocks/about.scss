@@ -1,0 +1,142 @@
+.about {
+  margin-bottom: 28px;
+}
+
+.about__wrapper {
+  min-width: 290px;
+  padding: 15px;
+  padding-top: 7px;
+  margin: 0 auto;
+}
+
+.about__title {
+  margin: 0;
+  margin-bottom: 28px;
+
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.about__description {
+  margin: 0;
+
+  line-height: 22px;
+
+  &--first {
+    margin-bottom: 40px;
+  }
+
+  &--second {
+    margin-bottom: 30px;
+  }
+}
+
+.about__button {
+  padding: 13px 52px;
+
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  color: $color-blue;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background-color: transparent;
+  border: 1px $color-blue solid;
+  border-radius: 5px;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: $color-white;
+
+    background-color: $color-blue;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .about {
+    margin: 0 auto;
+    width: 770px;
+    margin-bottom: 32px;
+  }
+
+  .about__wrapper {
+    position: relative;
+
+    padding: 0 25px;
+    display: block;
+    width: 580px;
+    margin-right: 2px;
+    margin-left: auto;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -13px;
+      left: -188px;
+
+      width: 162px;
+      height: 360px;
+
+      background-image: url("../img/2005.png");
+      background-repeat: no-repeat;
+    }
+  }
+
+  .about__title {
+    margin-bottom: 36px;
+    font-size: 32px;
+  }
+
+  .about__description {
+    &--first {
+      margin-bottom: 19px;
+    }
+
+    &--second {
+      margin-bottom: 42px;
+    }
+  }
+
+  .about__button {
+    padding: 13px 50px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about {
+    width: 1220px;
+    margin-bottom: 46px;
+  }
+
+  .about__wrapper {
+    width: 1038px;
+
+    &::before {
+      top: -12px;
+      left: -178px;
+
+      width: 220px;
+      height: 317px;
+
+      background-size: 220px 317px;
+    }
+  }
+
+  .about__title {
+    margin-bottom: 33px;
+
+    font-size: 36px;
+    color: $color-dark-gray;
+  }
+
+  .about__description {
+    color: $color-dark-gray;
+  }
+
+  .about__description--second {
+    margin-bottom: 51px;
+  }
+}

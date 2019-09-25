@@ -1,0 +1,241 @@
+.main-intro {
+  min-height: 647px;
+  overflow: hidden;
+
+  background-image: url("../img/background-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+}
+
+.main-intro__wrapper {
+  min-width: 290px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.main-intro__title {
+  margin-bottom: 29px;
+
+  font-family: "Roboto Condensed", sans-serif;
+  color: $color-white;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 47px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.main-intro__item {
+  position: relative;
+  z-index: 2;
+
+  width: 290px;
+  margin: 0 auto;
+  padding-top: 238px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 55px;
+    left: 11px;
+    z-index: -1;
+
+    width: 603px;
+    height: 367px;
+
+    background-image: url("../img/plates-mobile.png");
+    background-size: 603px 367px;
+    background-repeat: no-repeat;
+  }
+}
+
+.main-intro__description {
+  position: relative;
+
+  width: 237px;
+  margin-left: auto;
+  margin-bottom: 41px;
+
+  color: $color-white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 13px;
+    left: -50px;
+
+    width: 33px;
+    height: 2px;
+
+    background-color: $color-white;
+  }
+}
+
+.main-intro__link {
+  display: block;
+  width: 100%;
+
+  padding: 15px;
+
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700;
+  color: $color-white;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+
+  background: $color-blue;
+  border-radius: 5px;
+
+  &--tablet {
+    display: none;
+  }
+}
+
+.main-intro__scroll {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .main-intro {
+    min-height: 686px;
+
+    background-image: url("../img/background-tablet.jpg");
+  }
+
+  .main-intro__item {
+    width: 430px;
+    padding-top: 123px;
+    margin-left: 73px;
+
+    &::before {
+      top: 98px;
+      left: 422px;
+
+      width: 465px;
+      height: 340px;
+      background-size: 465px 340px;
+      background-image: url("../img/plates-tablet.png");
+    }
+  }
+
+  .main-intro__title {
+    font-size: 60px;
+    line-height: 70px;
+    letter-spacing: 4px;
+  }
+
+  .main-intro__description {
+    width: 379px;
+    margin-bottom: 56px;
+
+    font-size: 18px;
+    line-height: 28px;
+
+    &::before {
+      top: 16px;
+      left: -48px;
+    }
+  }
+
+  .main-intro__link {
+    width: 379px;
+    margin-left: auto;
+
+    &--mobile {
+      display: none;
+    }
+
+    &--tablet {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-intro {
+    min-height: 882px;
+
+    background-image: url("../img/background-desktop.jpg");
+  }
+
+  .main-intro__wrapper {
+    position: relative;
+    max-width: 1450px;
+    min-height: 880px;
+  }
+
+  .main-intro__item {
+    width: 796px;
+    padding-top: 237px;
+    margin: 0;
+
+    &::before {
+      top: 242px;
+      left: 788px;
+
+      width: 705px;
+      height: 515px;
+
+      background-size: 705px 515px;
+      background-image: url("../img/plates-desktop.png");
+    }
+  }
+
+  .main-intro__title {
+    font-size: 80px;
+    line-height: 90px;
+    letter-spacing: 5.5px;
+  }
+
+  .main-intro__description {
+    width: 699px;
+    margin-bottom: 44px;
+
+    font-size: 22px;
+    line-height: 34px;
+
+    &::before {
+      left: -93px;
+
+      width: 64px;
+    }
+  }
+
+  .main-intro__link {
+    width: 407px;
+    margin-left: 96px;
+
+    &:hover,
+    &:focus {
+      color: $color-blue;
+      background-color: $color-white;
+      border: 1px solid $color-blue;
+    }
+  }
+
+  .main-intro__scroll {
+    position: absolute;
+    left: -22px;
+    bottom: 116px;
+
+    display: block;
+
+    font-size: 14px;
+    line-height: 16px;
+    color: $color-white;
+    text-decoration: none;
+
+    opacity: 0.5;
+    outline: none;
+
+    transform: rotate(-90deg);
+
+    &:hover,
+    &:focus {
+      color: $color-blue;
+    }
+  }
+}
